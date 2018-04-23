@@ -1,0 +1,149 @@
+body{
+	background-image:url(img/bg.jpg);
+}
+.form-style-5{
+   
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.4);
+    margin-left: 150px;
+	margin-top: 40px;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Arial;
+	color:white;
+}
+.form-style-4{
+    max-width: 500px;
+    padding: 10px 20px;
+    background: rgba(0,0,0,0.4);
+    margin-left: 700px;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: Arial;
+	color:white;
+	margin-top:-720px;
+	height:720px;
+}
+.form-style-5 fieldset,
+.form-style-4 fieldset{
+    border: none;
+}
+.form-style-5 legend,
+.form-style-4 legend
+ {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.form-style-5 label,
+.form-style-4 label {
+    display: block;
+    margin-bottom: 8px;
+}
+.form-style-5 input[type="text"],
+.form-style-5 input[type="date"],
+.form-style-5 input[type="datetime"],
+.form-style-5 input[type="email"],
+.form-style-5 input[type="number"],
+.form-style-5 input[type="search"],
+.form-style-5 input[type="time"],
+.form-style-5 input[type="url"],
+.form-style-5 textarea,
+.form-style-5 select,
+.form-style-4 input[type="text"],
+.form-style-4 input[type="date"],
+.form-style-4 input[type="datetime"],
+.form-style-4 input[type="email"],
+.form-style-4 input[type="number"],
+.form-style-4 input[type="search"],
+.form-style-4 input[type="time"],
+.form-style-4 input[type="url"],
+.form-style-4 textarea,
+.form-style-4 select {
+    font-family: Arial;
+    border-width: 2px;
+	border-style:solid;
+    border-radius: 40px;
+    font-size: 13px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-color: transparent;
+    color:white;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 20px;
+   
+}
+.form-style-5 input[type="text"]:focus,
+.form-style-5 input[type="date"]:focus,
+.form-style-5 input[type="datetime"]:focus,
+.form-style-5 input[type="email"]:focus,
+.form-style-5 input[type="number"]:focus,
+.form-style-5 input[type="search"]:focus,
+.form-style-5 input[type="time"]:focus,
+.form-style-5 input[type="url"]:focus,
+.form-style-5 textarea:focus,
+.form-style-5 select:focus,
+.form-style-4 input[type="text"]:focus,
+.form-style-4 input[type="date"]:focus,
+.form-style-4 input[type="datetime"]:focus,
+.form-style-4 input[type="email"]:focus,
+.form-style-4 input[type="number"]:focus,
+.form-style-4 input[type="search"]:focus,
+.form-style-4 input[type="time"]:focus,
+.form-style-4 input[type="url"]:focus,
+.form-style-4 textarea:focus,
+.form-style-4 select:focus{
+    background: ;
+}
+.form-style-5 select,
+.form-style-4 select{
+    -webkit-appearance: menulist-button;
+    height:35px;
+}
+.form-style-5 .number,
+.form-style-4 .number {
+    background: #404040;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+.form-style-5 input[type="submit"],
+.form-style-5 input[type="button"],
+.form-style-4 input[type="submit"],
+.form-style-4 input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #696969;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #696969;
+	border-radius:30px;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+.form-style-5 input[type="submit"]:hover,
+.form-style-5 input[type="button"]:hover,
+.form-style-4 input[type="submit"]:hover,
+.form-style-4 input[type="button"]:hover
+{
+    background: #404040;
+}

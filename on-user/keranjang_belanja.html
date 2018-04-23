@@ -1,0 +1,173 @@
+<?php include'menu.php';?>
+<?php 
+session_start();    
+$sid = session_id();
+include "koneksi.php";
+echo"<h1>Keranjang Belanja</h1>
+          <table border=1>
+          <tr>
+                <th>Nama Produk</th>
+                <th>Qty</th>
+                <th>Harga</th>
+                <th>Sub Total</th>
+          </tr>
+          ";    <br><br>//jalankan perintah inner join dari tabel keranjang dan produk
+$sql = mysql_query("SELECT * FROM keranjang, produk WHERE id_session='$sid' AND keranjang.id_produk=produk.id_produk");       
+while($d=mysql_fetch_array($sql)){
+        $subtotal    = $d[harga]* $d[jumlah];
+        $total       = $total + $subtotal;
+        echo"<tr><td>$d[nama_produk]</td>
+            <td>$d[jumlah]</td>
+            <td>$d[harga]</td>
+            <td>$subtotal</td></tr>";
+}
+echo"</table>
+<h2>Total Belanja : <b>$total</b></h2>
+<ul>
+<li><a href='produk.php'>Tambah</a></li>
+<li><a href='selesai.php'>Selesai belanja</a></li>
+</ul>";
+?>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="#">ELIM FLOWER</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href="index.php">Beranda</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="produk.php">Produk</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">About</a>
+			</li>
+			<li class="nav-item">
+				<input type="text" class="form-control" placeholder="Search">
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#"><i class="fas  fa-search"></i></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Keranjang Belanja<i class="fas  fa-shopping-cart"></i></a>
+			</li>
+		</ul>
+</div>
+</nav>
+
+<div class="form-style-5" style="max-width:900px;margin-left:250px;">
+
+<fieldset>
+<div><img src="img/b1.jpg" alt="" / style="height:170px; float:left; margin-right:50px;"></div>
+<div style=" font-size:40px;">Bunga Anggrek<a href="produk.php" class="btn btn-outline-secondary" style="font-size:25px; color:white;border-color:white;margin-left:500px ;float:left;">Tambah</a></div>
+<div style="font-size:20px;">Rp.10.000<a href="#" class="btn btn-outline-secondary" style="width:115px;font-size:25px; color:white;border-color:white;margin-left:500px ;float:left;">Hapus</a></div>
+<a href="halaman_pemesanan.php" class="btn btn-outline-secondary" style="font-size:25px; color:white;border-color:white;margin-left:400px ;float:left;margin-bottom:30px">Lanjut</a>
+</div>
+
+
+
+ 
+</select>      
+</fieldset>
+<fieldset>
+
+</fieldset>
+
+<!--<input type="submit" value="Apply" />-->
+
+</div>
+
+<!--- Footer -->
+<footer id="footer"><!--Footer-->
+			<div class="footer-widget">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Elim Flower</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Tentang Kami</a></li>
+								<li><a href="#">Kisah Penjual</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-2	">
+						<div class="single-widget">
+							<h2>Beli</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Belanja Di Elim Flower</a></li>
+								<li><a href="#">Cara Belanja</a></li>
+								<li><a href="#">Pembayaran</a></li>
+								<li><a href="#">Pengembalian dana</a></li>
+								<li><a href="#">Hot List</a></li>
+							</ul>
+						</div>
+					</div>
+						
+					<div class="col-sm-2">
+						<div class="single-widget">
+							<h2>Bantuan</h2>
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="#">Syarat dan Ketentuan</a></li>
+								<li><a href="#">Kebijakan Privasi</a></li>
+								<li><a href="#">Pusat Resolusi</a></li>
+								<li><a href="#">Hubungi Kami</a></li>
+								<li><a href="#">Tentang Kami</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>Tentang Elim Flower</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Untuk mendapatkan Update baru dari Toko Online Elim Flower Tinggalkan Email Disini</p>
+							</form>
+						</div>
+					</div>
+					<div class="col-sm-3 col-sm-offset-1">
+						<div class="single-widget">
+							<h2>Connect</h2>
+							<form action="#" class="searchform">
+								<input type="text" placeholder="Your email address" />
+								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+								<p>Untuk mendapatkan Update baru dari Toko Online Elim Flower Tinggalkan Email Disini</p>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<p class="pull-left">Copyright &copy;  2018 TI B PNJ | Elim Flower</p>
+				</div>
+			</div>
+		</div>
+		
+	</footer><!--/Footer-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
